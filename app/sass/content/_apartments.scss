@@ -1,0 +1,71 @@
+.apartments {
+  display: block;
+  position: relative;
+  float: left;
+  width: 100%;
+  background: #fafafa;
+  h1 {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 65px;
+  }
+  &__slider {
+    display: block;
+    position: relative;
+    float: left;
+    width: 100%;
+    padding-bottom: 200px;
+    &__photo {
+      width: 50%;
+      position: relative;
+      float: left;
+      display: block;
+      img{
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+      }
+    }
+    &__text{
+      width: 50%;
+      position: relative;
+      float: left;
+      display: block;
+      padding-left: 50px;
+      box-sizing: border-box;
+      h3{
+        color: #030000;
+        font-size: 20px;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+      p{
+        color: #030000;
+        font-size: 18px;
+        font-weight: 500;
+        font-variant: small-caps;
+      }
+    }
+
+  }
+  .owl-nav {
+    position: absolute;
+    top: 30%;
+    left: 45%;
+  }
+  .owl-prev, .owl-next {
+    width: 80px;
+    height: 80px;
+    background: #ffc03c;
+    text-align: center;
+    line-height: 79px;
+    font-size: 50px;
+    font-weight: normal;
+    color: #fff;
+    &:hover{
+      background: #bb8617;
+      transition: 200ms ease;
+    }
+  }
+
+}

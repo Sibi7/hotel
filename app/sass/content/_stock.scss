@@ -1,0 +1,72 @@
+.stock{
+  position: relative;
+  display: block;
+  float: left;
+  width: 100%;
+  background: url(../img/stock-bg.png) center top no-repeat;
+  &__absolute{
+    display: block;
+    position: relative;
+    width: 700px;
+    bottom: -4px;
+    left: 120px;
+    float: left;
+    img{
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  &__text{
+    position: absolute;
+    width: 418px;
+    float: left;
+    right: 180px;
+    bottom: 99px;
+    p{
+      color: #fafafa;
+      margin: 0;
+      font-size: 44px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+    button{
+      display: block;
+      position: relative;
+      width: 278px;
+      height: 60px;
+      background-color: #ffc03c;
+      border: none;
+      text-align: center;
+      text-transform: uppercase;
+      border-radius: 5px;
+      z-index: 2;
+      font-size: 46px;
+      float: left;
+      font-weight: 500;
+      margin-top: 30px;
+      cursor: pointer;
+      img{
+        position: absolute;
+        right: -97px;
+        top: -39px;
+
+      }
+      &:after{
+        display: block;
+        position: absolute;
+        content: "";
+        top: 0;
+        left: -7px;
+        width: 168px;
+        height: 60px;
+        border-radius: 5px;
+        background-color: #ffc03c;
+        -webkit-transform: skew(-13deg);
+        -ms-transform: skew(-13deg);
+        transform: skew(-13deg);
+        z-index: -1;
+
+      }
+    }
+  }
+}

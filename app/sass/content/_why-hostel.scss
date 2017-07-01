@@ -1,0 +1,59 @@
+.why-hostel {
+  display: block;
+  position: relative;
+  float: left;
+  width: 100%;
+  padding-top: 150px;
+  h1 {
+    color: #504f4f;
+    font-weight: 700;
+    font-size: 38px;
+    line-height: 38px;
+    margin-bottom: 0;
+    text-align: center;
+    margin-top: 65px;
+  }
+  h2 {
+    font-size: 15px;
+    line-height: 28px;
+    margin: 0;
+    text-align: center;
+  }
+  &__wrapper {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    margin-top: 60px;
+    &__item {
+      text-align: center;
+      p {
+        color: #333;
+        font-size: 14px;
+        font-weight: 400;
+        height: 50px;
+      }
+      img {
+        height: 70px;
+      }
+    }
+  }
+  &__border{
+    display: block;
+    position: relative;
+    float: left;
+    width: 100%;
+    height: 21px;
+    overflow: hidden;
+    padding: 0 92px;
+    margin-top: 17px;
+    margin-bottom: 77px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    img{
+      width: 100%;
+      height: 100%;
+      -o-object-fit: contain;
+      object-fit: contain;
+    }
+  }
+}
