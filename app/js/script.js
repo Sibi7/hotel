@@ -64,28 +64,17 @@ $(document).ready(function () {
         }
     });
 
-    /*map*/
 
-        var map = new Map();
-        map.init({
-            selector:'#contacts-map',
-            center: $('.contacts__data p').text(),
-            zoom: 17,
-            placemarks: [
-                {
-                    address: $('.contacts__data p').text(),
-                    options: [
-                        {key:'draggable',value:true}
-                    ],
-                    properties: [
-                        /*{key:'hintContent',value:''},
-                         {key:'balloonContentHeader', value:"Предприятия Самары"},
-                         {key:'balloonContentBody', value:"<h1>Название</h1>"}*/
-                    ]
-                }
-            ]
-        });
-        /*close map*/
+});
+$(document).ready(function () {
+    var link =$('.menu-link');
+    var link_active = $('.menu-link_active');
 
-
+    link.click(function () {
+        link.toggleClass('menu-link_active');
+    })
+});
+$( ".menu-link" ).click(function() {
+    $( ".header__nav__menu" ).slideToggle( "slow", function() {
+    });
 });

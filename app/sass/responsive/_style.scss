@@ -11,8 +11,18 @@
 }
 
 @media only screen and (max-width: 736px) {
-  .header__nav {
+  .header__nav__menu {
     display: none;
+  }
+  .header__nav button, .header__nav button:after {
+    width: 100%;
+  }
+  .header__nav{
+    position: relative;
+  }
+  .header__nav__contact {
+    width: 100%;
+    text-align: center;
   }
   .header__middle-content {
     width: 100%;
