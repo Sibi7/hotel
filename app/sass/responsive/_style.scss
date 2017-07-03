@@ -29,9 +29,151 @@
     width: 100%;
     height: auto;
     float: left;
+    margin: 72px auto 20px auto;
   }
   .header__middle-content__icon {
     display: none;
+  }
+  .header__middle-content__text ul {
+    padding: 0;
+    margin-left: 37px;
+    padding-bottom: 20px;
+  }
+  .header__form h1 {
+    text-align: center;
+    font-size: 34px;
+  }
+  .header__form__wrapper {
+    width: 100%;
+    padding: 0;
+  }
+  .header__form {
+    width: 100%;
+    height: auto;
+    padding: 0 10px;
+    bottom: 0;
+    margin-bottom: 30px;
+  }
+  .header__form__wrapper__input-right {
+    margin-left: 0;
+    margin-right:0;
+  }
+  .header__form__wrapper__input-right-button, .header__form__wrapper__input-right-button button {
+    margin: 0 0 30px 0;
+  }
+  .why-hostel {
+    padding-top: 0;
+  }
+  .why-hostel__wrapper {
+    display: block;
+    position: relative;
+  }
+  .why-hostel__border {
+    display: none;
+  }
+  .rostov__wrapper__item img {
+    width: 100%;
+  }
+  .rostov__wrapper__item {
+    width: 100%;
+    border-right: none;
+    text-align: left;
+  }
+  .rostov__wrapper__item__content {
+    width: 100%;
+    padding-left: 0;
+  }
+  .rostov__wrapper__item__content h2 {
+    width: 100%;
+    text-align: center;
+    height: auto;
+  }
+  .rostov__wrapper__item__content ul li {
+    font-size: 100%;
+    line-height: 75px;
+  }
+  .rostov__wrapper__item__content button{
+    margin-bottom: 30px;
+  }
+  .rostov__wrapper__item:last-child {
+    border-right: none;
+    border-left: none;
+  }
+  .apartments h1 {
+    margin-top: 0;
+  }
+  .welcome__wrap__item {
+    width: 100%;
+  }
+  .welcome__wrap__item figure {
+    top: 0;
+    img{
+      width: 100%;
+    }
+  }
+  .welcome__wrap__item p {
+    padding: 0;
+  }
+  .welcome__wrap__item h2 {
+    font-size: 31px;
+    text-align: center;
+  }
+  .reviews .owl-prev {
+    margin-left: 0;
+    top: 20px;
+  }
+  .reviews .owl-next {
+    margin-top: 20px;
+    right: 0;
+  }
+  .stock__absolute {
+    width: 100%;
+    bottom: 0;
+    left: 0;
+  }
+  .stock__text {
+    width: 100%;
+    right: 0;
+    bottom: 0;
+  }
+  .stock__text button img {
+    display: none;
+  }
+  .stock__text p {
+    width: 100%;
+    font-size: 20px;
+    text-align: center;
+  }
+  .stock__text button {
+    float: none;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+  .contact__map-left {
+    width: 100%;
+  }
+  .contact__map-right {
+    display: none;
+  }
+  .contact__data {
+    top: 25%;
+    left: 0;
+  }
+  .contact__data:before {
+    display: none;
+  }
+  .contact__data {
+    width: 100%;
+    height: 200px;
+    top: 25%;
+    left: 0;
+    padding-left: 15px;
+  }
+  .footer p {
+    text-align: left;
+  }
+  .footer a img {
+    width: 150px;
   }
 }
 
