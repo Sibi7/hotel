@@ -3,6 +3,8 @@
   position: relative;
   float: left;
   width: 100%;
+  /*padding-top: 68px;
+  @include box-sizing(border-box);*/
   &__wrap{
     display: block;
     position: relative;

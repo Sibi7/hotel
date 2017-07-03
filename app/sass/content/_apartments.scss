@@ -14,39 +14,136 @@
     position: relative;
     float: left;
     width: 100%;
-    padding-bottom: 200px;
-    &__photo {
-      width: 50%;
+    padding-bottom: 0;
+    &--element {
+      display: block;
       position: relative;
       float: left;
+      width: 100%;
+      margin-bottom: 59px;
+    }
+    &__photo {
       display: block;
-      img{
+      position: relative;
+      float: left;
+      width: 608px;
+      height: 479px;
+      overflow: hidden;
+      @include breakpoint(max-width 770px){
+        width: 100%;
+      }
+      @include breakpoint(max-width 660px){
         width: 100%;
         height: 400px;
+      }
+      @include breakpoint(max-width 440px){
+        width: 100%;
+        height: 300px;
+      }
+      img {
+        size: 100%;
         object-fit: cover;
       }
     }
-    &__text{
-      width: 50%;
+    &__text {
+      display: block;
       position: relative;
       float: left;
-      display: block;
+      width: calc(100% - 608px);
       padding-left: 50px;
-      box-sizing: border-box;
-      h3{
+      @include box-sizing(border-box);
+      @include breakpoint(max-width 770px){
+        width: 100%;
+      }
+      h3 {
         color: #030000;
         font-size: 20px;
         font-weight: 700;
         text-transform: uppercase;
       }
-      p{
+      p {
         color: #030000;
         font-size: 18px;
         font-weight: 500;
-        font-variant: small-caps;
+        /*font-variant: small-caps;*/
       }
     }
-
+    .flex-direction-nav {
+      position: absolute;
+      width: 105px;
+      height: 210px;
+      top: calc(50% - (210px / 2));
+      left: 45%;
+      @include breakpoint(max-width 770px){
+        left: calc(100% - 105px);
+      }
+      @include breakpoint(max-width 600px){
+       display: none;
+      }
+      a {
+        display: block;
+        position: relative;
+        float: left;
+        width: 100%;
+        height: 105px;
+        background: #ffc03c;
+        text-align: center;
+        line-height: 79px;
+        font-size: 50px;
+        font-weight: normal;
+        color: transparent;
+        text-shadow: none;
+        text-decoration: none;
+        margin: 0;
+        z-index: 10;
+        overflow: hidden;
+        opacity: 1;
+        transition: none;
+        cursor: pointer;
+        &:hover {
+          outline: none;
+          background-color: #bb8617;
+        }
+        &:focus {
+          outline: none;
+        }
+      }
+      .flex-disabled {
+        opacity: 1 !important;
+      }
+      .flex-prev {
+        left: 0;
+        text-align: center;
+        background-image: url('../img/icon/prev-apart-arr-icon.png');
+        background-repeat: no-repeat;
+        -webkit-background-size: 9px 18px;
+        background-size: 9px 18px;
+        background-position: 50%;
+        &:before {
+          display: none;
+        }
+      }
+      .flex-next {
+        right: 0;
+        text-align: center;
+        background-image: url('../img/icon/next-apart-arr-icon.png');
+        background-repeat: no-repeat;
+        -webkit-background-size: 9px 18px;
+        background-size: 9px 18px;
+        background-position: 50%;
+        &:before {
+          display: none;
+        }
+      }
+    }
+  }
+  .flexslider:hover .flex-direction-nav .flex-prev {
+    opacity: 1;
+    left: 0;
+  }
+  .flexslider:hover .flex-direction-nav .flex-next {
+    opacity: 1;
+    right: 0;
   }
   .owl-nav {
     position: absolute;
@@ -62,10 +159,64 @@
     font-size: 50px;
     font-weight: normal;
     color: #fff;
-    &:hover{
+    &:hover {
       background: #bb8617;
       transition: 200ms ease;
     }
   }
-
+  &__thumbnail {
+    /*@include display-flex(flex);
+    @include flex-wrap(wrap);
+    @include flex-direction(row);
+    @include justify-content(center);*/
+    display: block;
+    position: relative;
+    float: left;
+    width: 100%;
+    margin-bottom: 132px;
+    padding-left: 92px;
+    padding-right: 92px;
+    @include box-sizing(border-box);
+    @include breakpoint(max-width 660px){
+      display: none;
+    }
+    ul {
+      display: block;
+      position: relative;
+      float: left;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      li {
+        height: 140px;
+        margin-left: 15px;
+        overflow: hidden;
+        outline: none;
+        cursor: pointer;
+        img {
+          size: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+    &--element {
+      display: block;
+      position: relative;
+      float: left;
+      width: 220px;
+      height: 140px;
+      margin-left: 15px;
+      margin-right: 15px;
+      overflow: hidden;
+      outline: none;
+      cursor: pointer;
+      img {
+        size: 100%;
+        object-fit: cover;
+      }
+    }
+    .flex-direction-nav {
+      display: none;
+    }
+  }
 }
