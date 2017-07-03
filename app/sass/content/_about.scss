@@ -1,12 +1,98 @@
-.about{
+.about {
   display: block;
   position: relative;
   float: left;
   width: 100%;
-  &__wrapper{
+  background: #fafafa;
+  &__wrapper {
     display: block;
     position: relative;
     float: left;
     width: 50%;
+    padding-top: 80px;
+    text-align: center;
+    h1 {
+      text-align: center;
+      color: #504f4f;
+      font-size: 38px;
+      font-weight: 700;
+      line-height: 38px;
+      margin-top: -20px;
+    }
+    h3 {
+      margin-top: -80px;
+      color: #504f4f;
+      font-size: 27px;
+      font-weight: 700;
+      line-height: 27px;
+    }
+    img {
+      width: 485px;
+    }
+    p {
+      color: #000000;
+      font-size: 20px;
+      font-weight: 700;
+      text-align: left;
+      border-bottom: 6px solid #ffc80a;
+      padding-bottom: 35px;
+    }
+    h2 {
+      color: #504f4f;
+      font-size: 27px;
+      font-weight: 700;
+      line-height: 27px;
+      text-align: left;
+    }
+    address {
+      color: #000000;
+      font-size: 20px;
+      font-weight: 700;
+      text-align: left;
+      width: 382px;
+      font-style: normal;
+      margin: 0 auto;
+      span {
+        display: block;
+      }
+      a {
+        color: #000000;
+        font-size: 20px;
+        font-weight: 700;
+
+      }
+    }
+    &__contacts {
+      color: #000000;
+      font-size: 20px;
+      font-weight: 700;
+      text-align: left;
+      width: 382px;
+      margin: 0 auto;
+      margin-top: 30px;
+      span {
+        display: block;
+      }
+      a {
+        color: #000;
+        display: block;
+        margin-bottom: 30px;
+      }
+      p {
+        border: none;
+      }
+
+    }
+    .contact-text {
+      border: none;
+    }
+
+  }
+  &__map {
+    display: block;
+    position: relative;
+    float: left;
+    width: 100%;
+    padding-bottom: 50px;
   }
 }
