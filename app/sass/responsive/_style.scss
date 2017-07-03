@@ -46,10 +46,22 @@
   .apartments__slider .flex-direction-nav {
     top: calc(28% - 105px);
   }
-	
-}
 
+}
 @media only screen and (max-width: 770px) {
+  .header__nav button {
+    margin-right: 0;
+  }
+  .about__wrapper img {
+    width: 100%;
+  }
+  .about__wrapper address {
+    width: 100%;
+  }
+  .about__wrapper__contacts {
+    text-align: left;
+    width: 100%;
+  }
   .header__nav__menu {
     position: fixed;
     height: 100vh;
