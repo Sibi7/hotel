@@ -11,7 +11,28 @@
 }
 
 @media only screen and (max-width: 736px) {
-	
+  .header__nav {
+    display: none;
+  }
+  .header__middle-content {
+    width: 100%;
+  }
+  .header__middle-content__text p {
+    width: 100%;
+    margin-left: 0;
+    text-align: center;
+  }
+  .header__middle-content:before{
+    display: none;
+  }
+  .header__middle-content {
+    width: 100%;
+    height: auto;
+    float: left;
+  }
+  .header__middle-content__icon {
+    display: none;
+  }
 }
 
 @media only screen and (max-width: 500px) {
@@ -19,5 +40,5 @@
 }
 
 @media only screen and (max-width: 320px) {
-	
+
 }
