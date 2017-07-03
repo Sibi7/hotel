@@ -1,0 +1,12 @@
+.about{
+  display: block;
+  position: relative;
+  float: left;
+  width: 100%;
+  &__wrapper{
+    display: block;
+    position: relative;
+    float: left;
+    width: 50%;
+  }
+}
