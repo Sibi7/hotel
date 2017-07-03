@@ -1,0 +1,98 @@
+.our-apartments {
+  font-family: 'Roboto';
+  &__head {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    width: 850px;
+    margin: 0 auto;
+    text-align: center;
+    h2 {
+      font-size: 37px;
+      font-weight: 600;
+      color: #504f4f;
+    }
+    p {
+      font-size: 17px;
+      font-weight: 600;
+    }
+    &__address {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+      align-items: center;
+      &__block {
+        width: 50%;
+        float: left;
+        h3 {
+          color: #63480f;
+          font-size: 28px;
+          font-weight: 600;
+          text-transform: uppercase;
+        }
+        p {
+          font-size: 20px;
+          font-weight: 600;
+        }
+        .for-yellow-string {
+          border-right: 5px solid #ffc03c;
+        }
+      }
+    }
+  }
+  &__body {
+    &__tabs {
+      min-width: 320px;
+      padding: 0px;
+      margin: 0 auto;
+      #tab-1:checked ~ #content-tab-1, #tab-2:checked ~ #content-tab-2, #tab-3:checked ~ #content-tab-3, #tab-4:checked ~ #content-tab-4 {
+        display: block;
+      }
+      &__label {
+        float: left;
+        cursor: pointer;
+        display: inline-block;
+        margin: 0 0 -1px;
+        padding: 15px 25px;
+        font-weight: 600;
+        text-align: center;
+      }
+      input {
+        visibility: hidden;
+        position: absolute;
+        &:checked + label {
+          color: #63480f;
+          border-bottom: 1px solid #ffc03c;
+        }
+      }
+      &__tab {
+        &__content {
+          display: none;
+          padding: 15px;
+          background: #fff;
+          border: 1px solid #ddd;
+          &__slider {
+            width: 50%;
+          }
+          &__text {
+            width: 50%;
+          }
+        }
+      }
+    }
+  }
+  &__foot {
+    width: 850px;
+    margin: 0px auto;
+    text-align: center;
+    h4 {
+      font-size: 23.2px;
+      font-weight: 600;
+    }
+    p {
+      text-align: left;
+      color: #000;
+      font-weight: 600;
+    }
+  }
+}
