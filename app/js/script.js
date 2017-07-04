@@ -88,10 +88,10 @@ $('.our-apartments__body__slider__content').each(function (i) {
         $(this).hide(0)
     }
 });
-$(document).on('click', '.our-apartments__body__tabs a', function (e) {
+$(document).on('click', '.our-apartments__head__address__block a', function (e) {
     e.preventDefault();
     var tabId = $(this).attr('href');
-    $('.our-apartments__body__tabs__tab a').removeClass('active');
+    $('.our-apartments__head__address__block a').removeClass('active');
     $(this).addClass('active');
     $('.our-apartments__body__slider__content').hide();
     $(tabId).show();
@@ -107,3 +107,18 @@ $(window).load(function() {
     });
 });
 
+
+//for gallery
+$('.photo').each(function (i) {
+    if (i != 0) {
+        $(this).hide(0)
+    }
+});
+$(document).on('click', '.our-apartments__head__address a', function (e) {
+    e.preventDefault();
+    var tabId = $(this).attr('href');
+    $('.our-apartments__head__address a').removeClass('active');
+    $(this).addClass('active');
+    $('.photo').hide();
+    $(tabId).fadeIn();
+});
