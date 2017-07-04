@@ -17,6 +17,22 @@
 
 <!-- start header-nav.html-->
 <div class="header__nav">
+    <div class="header__nav__request-call">
+        <div class="header__nav__request-call__block">
+            <h2>Закажите звонок и наш менеджер Вам перезвонит</h2>
+            <form>
+                <div class="input phone">
+                    <label for="phone">Телефон</label>
+                    <input type="text" name="phone">
+                </div>
+                <div class="input email">
+                    <label for="email">E-mail</label>
+                    <input type="text" name="email">
+                </div>
+            </form>
+            <a href="#">Отправить заявку</a>
+        </div>
+    </div>
     <div class="container">
         <div class="header__nav__logo">
             <a href="/">
@@ -31,7 +47,7 @@
                 <li><a href="index.html">Главная</a></li>
                 <li><a href="about.html">О хостеле</a></li>
                 <li><a href="our-apartments.html">Наши апартаменты</a></li>
-                <li><a href="#">Галерея</a></li>
+                <li><a href="galery.html">Галерея</a></li>
                 <li><a href="#">Контакты</a></li>
             </ul>
         </div>
@@ -43,7 +59,8 @@
                 +7 (952) 605 60 60
             </p>
         </div>
-        <button>Заказать звонок</button>
+        <button id="request">Заказать звонок</button>
+
     </div>
 </div>
 <!-- end header-nav.html-->
@@ -55,12 +72,13 @@
             <h2>Наши аппартаменты</h2>
             <p>Представляем Вашему вниманию несколько видов размещения в хостеле.</p>
             <div class="our-apartments__head__address">
-                <div class="our-apartments__head__address__block">
-                    <h3 class="for-yellow-string">Элитный хостел</h3>
+                <div class="our-apartments__head__address__block elit-gallery">
+                    <a class="for-yellow-string">Элитный хостел</a>
                     <p>Ул. Петровская 34</p>
                 </div>
-                <div class="our-apartments__head__address__block">
-                    <h3>Класический хостел</h3>
+
+                <div class="our-apartments__head__address__block classic-gallery">
+                    <a>Класический хостел</a>
                     <p>Ул. Металургическая 94б-1а</p>
                 </div>
                 <div class="clearfix"></div>
@@ -275,7 +293,7 @@
                         <p>Администратор хостела вправе отказать Гостю в заселении, если тот находится в нетрезвом
                             состоянии.</p>
                     </div>
-                </div>Б
+                </div>
 </section>
 <!-- end our-apartments.html-->
 
@@ -295,6 +313,7 @@
 <script src='js/jquery.flexslider.js' type="text/javascript"></script>
 <script src='js/owl.carousel.min.js' type="text/javascript"></script>
 <script src="js/script.min.js" type="text/javascript"></script>
+<script src="js/jquery.fancybox.js" type="text/javascript"></script>
 </body>
 </html>
 <!-- end html_close.html-->

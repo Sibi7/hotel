@@ -36,11 +36,13 @@
         }
         width: 50%;
         float: left;
-        h3 {
+        a {
+          display: block;
           color: #63480f;
           font-size: 28px;
           font-weight: 600;
           text-transform: uppercase;
+          margin: 0 auto;
         }
         p {
           font-size: 20px;
