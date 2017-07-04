@@ -122,3 +122,14 @@ $(document).on('click', '.our-apartments__head__address a', function (e) {
     $('.photo').hide();
     $(tabId).fadeIn();
 });
+
+
+//for request-call
+
+$('#request').on('click', function () {
+    if ($('.header__nav__request-call').attr('display','block')) {
+        $('.header__nav__request-call').attr('display','none')
+    } else {
+        $('.header__nav__request-call').attr('display','block')
+    }
+});
