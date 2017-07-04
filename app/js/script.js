@@ -24,7 +24,10 @@ $(document).ready(function () {
     });
 
     /*close apartments slider*/
-
+    $( function() {
+        $( "#datepicker" ).datepicker();
+        $( "#datepicker1" ).datepicker();
+    } );
 
     $('#reviews-slider').owlCarousel({
         loop: true,
@@ -79,4 +82,31 @@ $( ".menu-link" ).click(function() {
     });
 });
 // end hamburger menu
+
+
+//tabs for our-apartments
+
+$('.our-apartments__body__slider__content').each(function (i) {
+    if (i != 0) {
+        $(this).hide(0)
+    }
+});
+$(document).on('click', '.our-apartments__body__tabs a', function (e) {
+    e.preventDefault();
+    var tabId = $(this).attr('href');
+    $('.our-apartments__body__tabs__tab a').removeClass('active');
+    $(this).addClass('active');
+    $('.our-apartments__body__slider__content').hide();
+    $(tabId).show();
+    $('.flexslider').resize();
+});
+
+//end tabs for our-apartments
+
+$(window).load(function() {
+    $('.flexslider').flexslider({
+        animation: "slide",
+        controlNav: "thumbnails"
+    });
+});
 

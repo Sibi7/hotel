@@ -4,10 +4,13 @@
   float: left;
   width: 100%;
   &__head {
+    @include breakpoint(max-width 992px) {
+      width: 100%;
+    }
     display: flex;
-    flex-flow: column nowrap;
+    flex-flow: column wrap;
     justify-content: center;
-    width: 850px;
+    width: 100%;
     margin: 0 auto;
     text-align: center;
     h2 {
@@ -20,11 +23,17 @@
       font-weight: 600;
     }
     &__address {
+      @include breakpoint(max-width 730px) {
+        flex-flow: column;
+      }
       display: flex;
       flex-flow: row wrap;
       justify-content: space-between;
       align-items: center;
       &__block {
+        @include breakpoint(max-width 730px) {
+            width: 100%
+        }
         width: 50%;
         float: left;
         h3 {
@@ -39,56 +48,182 @@
         }
         .for-yellow-string {
           border-right: 5px solid #ffc03c;
+          @include breakpoint(max-width 730px) {
+            border: none;
+          }
         }
       }
     }
   }
   &__body {
+    p {
+      font-weight: 600;
+    }
+    a {
+      font-weight: 600;
+    }
     &__tabs {
-      min-width: 320px;
-      padding: 0px;
-      margin: 0 auto;
-      #tab-1:checked ~ #content-tab-1, #tab-2:checked ~ #content-tab-2, #tab-3:checked ~ #content-tab-3, #tab-4:checked ~ #content-tab-4 {
-        display: block;
-      }
-      &__label {
-        float: left;
-        cursor: pointer;
-        display: inline-block;
-        margin: 0 0 -1px;
-        padding: 15px 25px;
-        font-weight: 600;
-        text-align: center;
-      }
-      input {
-        visibility: hidden;
-        position: absolute;
-        &:checked + label {
-          color: #63480f;
-          border-bottom: 1px solid #ffc03c;
+      display: flex;
+      flex-flow: row wrap;
+      align-items: center;
+      padding: 0;
+      &__tab {
+        a {
+          display: block;
+          margin-left: 20px;
+          padding: 20px;
+          color: #000;
+          border-bottom: 3px solid transparent;
+          &:hover {
+            color: #885f09;
+            border-bottom: 3px solid #ffc80a;
+          }
         }
       }
-      &__tab {
-        &__content {
-          display: none;
-          padding: 15px;
-          background: #fff;
-          border: 1px solid #ddd;
-          &__slider {
-            width: 50%;
+    }
+    &__slider {
+      &__content {
+        display: flex;
+        flex-flow: row wrap;
+        &__photo {
+          @include breakpoint(max-width 992px) {
+            width: 100%;
           }
-          &__text {
-            width: 50%;
+          width: 50%;
+          .flexslider:hover .flex-direction-nav .flex-prev,
+          .flexslider:hover .flex-direction-nav .flex-next{
+            opacity: 1;
+            left: 0;
           }
+          &__wrap {
+            @include breakpoint(max-width 400px) {
+              margin: 0;
+            }
+            margin: 40px;
+
+            .flex-direction-nav {
+              @include breakpoint(max-width 1199px) {
+                display: none;
+              }
+              position: absolute;
+              width: 100px;
+              height: 200px;
+              top: 15%;
+              left: 85%;
+              .flex-prev {
+                left: 0;
+                text-align: center;
+                background-size: 9px 18px;
+                background-position: 50%;
+                display: block;
+                position: relative;
+                float: left;
+                width: 100%;
+                height: 100px;
+                background: #ffc03c;
+                text-align: center;
+                line-height: 79px;
+                font-size: 50px;
+                font-weight: 400;
+                color: transparent;
+                text-shadow: none;
+                text-decoration: none;
+                margin: 0;
+                z-index: 10;
+                overflow: hidden;
+                opacity: 1;
+                &:hover {
+                  background-color: #bb8617;
+                }
+              }
+              .flex-next {
+                left: 0;
+                text-align: center;
+                background-size: 9px 18px;
+                background-position: 50%;
+                display: block;
+                position: relative;
+                float: left;
+                width: 100%;
+                height: 100px;
+                background: #ffc03c;
+                text-align: center;
+                line-height: 79px;
+                font-size: 50px;
+                font-weight: 400;
+                color: transparent;
+                text-shadow: none;
+                text-decoration: none;
+                margin: 0;
+                z-index: 10;
+                overflow: hidden;
+                opacity: 1;
+                &:hover {
+                  background-color: #bb8617;
+                }
+              }
+            }
+            .flex-direction-nav a.flex-prev:before,
+            .flex-direction-nav a.flex-next:before{
+              content: "";
+              display: block;
+              width: 100%;
+              height: 100%;
+            }
+            .flex-direction-nav a.flex-prev:before {
+              background: url(../img/icon/prev-apart-arr-icon.png) no-repeat center;
+            }
+            .flex-direction-nav a.flex-next:before {
+              background: url(../img/icon/next-apart-arr-icon.png) no-repeat center;
+            }
+            .flex-control-thumbs {
+              display: flex;
+              justify-content: space-between;
+            }
+            .flex-control-thumbs li {
+              width: 33%;
+              margin: 15px;
+            }
+            padding: 10px;
+            img {
+              max-width: 100%;
+            }
+            .slides {
+              display: flex;
+              height: auto;
+              li {
+                display: block;
+                img {
+                  box-sizing: border-box;
+                  max-width: 100%;
+                }
+              }
+            }
+          }
+        }
+        &__text {
+          @include breakpoint(max-width 992px) {
+            width: 100%;
+          }
+          width: 50%;
+        }
+        .rules {
+          width: 100%;
         }
       }
     }
   }
   &__foot {
-    width: 850px;
+    @include breakpoint(max-width 992px) {
+      width: 100%;
+    }
+    width: 700px;
     margin: 0px auto;
     text-align: center;
     h4 {
+      border-top: 5px solid #ffc80a;
+      padding-top: 20px;
+      margin-top: 10px;
       font-size: 23.2px;
       font-weight: 600;
     }
