@@ -3,10 +3,13 @@
   position: relative;
   width: 100%;
   &__head {
+    @include breakpoint(max-width 992px) {
+      width: 100%;
+    }
     display: flex;
-    flex-flow: column nowrap;
+    flex-flow: column wrap;
     justify-content: center;
-    width: 850px;
+    width: 100%;
     margin: 0 auto;
     text-align: center;
     h2 {
@@ -19,11 +22,17 @@
       font-weight: 600;
     }
     &__address {
+      @include breakpoint(max-width 730px) {
+        flex-flow: column;
+      }
       display: flex;
       flex-flow: row wrap;
       justify-content: space-between;
       align-items: center;
       &__block {
+        @include breakpoint(max-width 730px) {
+            width: 100%
+        }
         width: 50%;
         float: left;
         h3 {
@@ -38,11 +47,20 @@
         }
         .for-yellow-string {
           border-right: 5px solid #ffc03c;
+          @include breakpoint(max-width 730px) {
+            border: none;
+          }
         }
       }
     }
   }
   &__body {
+    p {
+      font-weight: 600;
+    }
+    a {
+      font-weight: 600;
+    }
     &__tabs {
       display: flex;
       flex-flow: row wrap;
@@ -51,7 +69,7 @@
       &__tab {
         a {
           display: block;
-          margin-right: 20px;
+          margin-left: 20px;
           padding: 20px;
           color: #000;
           border-bottom: 3px solid transparent;
@@ -63,12 +81,13 @@
       }
     }
     &__slider {
-      display: block;
-      position: relative;
-      float: left;
       &__content {
         display: flex;
+        flex-flow: row wrap;
         &__photo {
+          @include breakpoint(max-width 992px) {
+            width: 100%;
+          }
           width: 50%;
           .flexslider:hover .flex-direction-nav .flex-prev,
           .flexslider:hover .flex-direction-nav .flex-next{
@@ -76,8 +95,15 @@
             left: 0;
           }
           &__wrap {
+            @include breakpoint(max-width 400px) {
+              margin: 0;
+            }
             margin: 40px;
+
             .flex-direction-nav {
+              @include breakpoint(max-width 1199px) {
+                display: none;
+              }
               position: absolute;
               width: 100px;
               height: 200px;
@@ -175,13 +201,22 @@
           }
         }
         &__text {
+          @include breakpoint(max-width 992px) {
+            width: 100%;
+          }
           width: 50%;
+        }
+        .rules {
+          width: 100%;
         }
       }
     }
   }
   &__foot {
-    width: 850px;
+    @include breakpoint(max-width 992px) {
+      width: 100%;
+    }
+    width: 700px;
     margin: 0px auto;
     text-align: center;
     h4 {
