@@ -126,10 +126,19 @@ $(document).on('click', '.our-apartments__head__address a', function (e) {
 
 //for request-call
 
-$('#request').on('click', function () {
-    if ($('.header__nav__request-call').attr('display','block')) {
-        $('.header__nav__request-call').attr('display','none')
-    } else {
-        $('.header__nav__request-call').attr('display','block')
-    }
+$(document).on('click', '#send-message', function () {
+    event.preventDefault();
+    console.log('111');
+    $('#overlay').fadeIn(400,
+        function () {
+            $('.request-call__block').css('display', 'block').animate({opacity: 1}, 200);
+        });
+});
+$(document).on('click', '#overlay', function () {
+    $('.request-call__block').animate({opacity: 0}, 200,
+        function () {
+            $(this).css('display', 'none');
+            $('#overlay').fadeOut(400);
+        }
+    );
 });
