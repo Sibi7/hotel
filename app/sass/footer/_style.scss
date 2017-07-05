@@ -24,3 +24,55 @@
     }
   }
 }
+  .request-call__block {
+    display: none;
+    position: fixed;
+    text-align: center;
+    width: 700px;
+    left: 50%;
+    top: 50%;
+    z-index: 11;
+    transform: translate(-50%, -50%);
+    padding: 50px;
+    background-color: rgba(77,76,76,.8);
+    border-radius: 5px;
+    border-bottom: 5px solid #fdc814;
+    h2 {
+      color: #fff;
+      padding: 20px 0;
+    }
+    form {
+      display: flex;
+      justify-content: space-between;
+    }
+    .input {
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+    }
+    label {
+      position: relative;
+      color: #fff;
+      padding-bottom: 5px;
+      font-size: 12px;
+      left: 10px;
+    }
+    input {
+      width: 340px;
+      transform: skew(-13deg);
+      height: 45px;
+      border-radius: 10px;
+    }
+    a {
+      display: inline-block;
+      padding: 20px 80px;
+      margin-top: 30px;
+      background-color: #ffc03c;
+      border-radius: 10px;
+      transform: skew(-13deg);
+      font-size: 21px;
+      text-transform: uppercase;
+      color: #000;
+    }
+  }
+

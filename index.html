@@ -19,22 +19,6 @@
 <header class="header">
 <!-- start header-nav.html-->
 <div class="header__nav">
-    <div class="header__nav__request-call">
-        <div class="header__nav__request-call__block">
-            <h2>Закажите звонок и наш менеджер Вам перезвонит</h2>
-            <form>
-                <div class="input phone">
-                    <label for="phone">Телефон</label>
-                    <input type="text" name="phone">
-                </div>
-                <div class="input email">
-                    <label for="email">E-mail</label>
-                    <input type="text" name="email">
-                </div>
-            </form>
-            <a href="#">Отправить заявку</a>
-        </div>
-    </div>
     <div class="container">
         <div class="header__nav__logo">
             <a href="/">
@@ -50,7 +34,7 @@
                 <li><a href="about.html">О хостеле</a></li>
                 <li><a href="our-apartments.html">Наши апартаменты</a></li>
                 <li><a href="galery.html">Галерея</a></li>
-                <li><a href="#">Контакты</a></li>
+                <li><a href="contacts-page.html">Контакты</a></li>
             </ul>
         </div>
         <div class="header__nav__contact">
@@ -61,7 +45,7 @@
                 +7 (952) 605 60 60
             </p>
         </div>
-        <button id="request">Заказать звонок</button>
+        <button id="send-message">Заказать звонок</button>
 
     </div>
 </div>
@@ -560,6 +544,22 @@
 
   </div>
 </footer>
+
+<div class="request-call__block">
+    <h2>Закажите звонок и наш менеджер Вам перезвонит</h2>
+    <form>
+        <div class="input phone">
+            <label for="phone">Телефон</label>
+            <input type="text" name="phone">
+        </div>
+        <div class="input email">
+            <label for="email">E-mail</label>
+            <input type="text" name="email">
+        </div>
+    </form>
+    <a href="#" >Отправить заявку</a>
+</div>
+<div id="overlay"></div>
 <!-- end footer.html-->
 
 <!-- start html_close.html-->
