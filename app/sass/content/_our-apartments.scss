@@ -10,9 +10,10 @@
     @include breakpoint(max-width 992px) {
       width: 100%;
     }
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
+    @include display-flex(flex);
+    @include flex-wrap(wrap);
+    @include flex-direction(column);
+    @include justify-content(center);
     width: 100%;
     margin: 0 auto;
     text-align: center;
@@ -31,12 +32,13 @@
     }
     &__address {
       @include breakpoint(max-width 730px) {
-        flex-flow: column;
+        @include flex-direction(column);
       }
-      display: flex;
-      flex-flow: row wrap;
-      justify-content: space-between;
-      align-items: center;
+      @include display-flex(flex);
+      @include flex-wrap(wrap);
+      @include flex-direction(row);
+      @include justify-content(center);
+      @include align-items(center);
       &__block {
         @include breakpoint(max-width 730px) {
             width: 100%
@@ -72,9 +74,10 @@
       font-weight: 600;
     }
     &__tabs {
-      display: flex;
-      flex-flow: row wrap;
-      align-items: center;
+      @include display-flex(flex);
+      @include flex-wrap(wrap);
+      @include flex-direction(row);
+      @include align-items(center);
       padding: 0;
       &__tab {
         a {
@@ -92,8 +95,9 @@
     }
     &__slider {
       &__content {
-        display: flex;
-        flex-flow: row wrap;
+        @include display-flex(flex);
+        @include flex-wrap(wrap);
+        @include flex-direction(row);
         &__photo {
           @include breakpoint(max-width 992px) {
             width: 100%;
@@ -186,8 +190,8 @@
               background: url(../img/icon/next-apart-arr-icon.png) no-repeat center;
             }
             .flex-control-thumbs {
-              display: flex;
-              justify-content: space-between;
+              @include display-flex(flex);
+              @include justify-content(space-between);
             }
             .flex-control-thumbs li {
               width: 33%;
@@ -198,7 +202,7 @@
               max-width: 100%;
             }
             .slides {
-              display: flex;
+              @include display-flex(flex);
               height: auto;
               li {
                 display: block;
