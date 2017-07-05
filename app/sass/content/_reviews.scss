@@ -6,10 +6,9 @@
   width: 100%;
   h3{
     text-align: center;
-    color: #494949;
-    font-family: "Gotham Pro", sans-serif;
-    font-size: 40px;
-    font-weight: 500;
+    font-family: Roboto,sans-serif;
+    font-size: 2em;
+    font-weight: 600;
     line-height: 40px;
   }
   &__slider{
@@ -103,7 +102,7 @@
       margin-top: 0;
       margin-bottom: 30px;
       color: #494949;
-      font-family: "Gotham Pro";
+      font-family: "Gotham Pro", sans-serif;
       font-size: 20px;
       font-weight: 600;
     }
