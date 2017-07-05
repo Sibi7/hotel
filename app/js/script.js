@@ -68,18 +68,35 @@ $(document).ready(function () {
     });
 //    hamburger menu
 
-    //tabs for our-apartments
-    $('.our-apartments__body__slider__content').each(function (i) {
+    //tabs for our-apartments .elit
+    $('.elit .our-apartments__body__slider__content').each(function (i) {
         if (i != 0) {
             $(this).hide(0)
         }
     });
-    $(document).on('click', '.our-apartments__body__tabs__tab a', function (e) {
+    $(document).on('click', '.elit .our-apartments__body__tabs__tab a', function (e) {
         e.preventDefault();
         var tabId = $(this).attr('href');
-        $('.our-apartments__body__tabs__tab a').removeClass('active');
+        $('.elit .our-apartments__body__tabs__tab a').removeClass('active');
         $(this).addClass('active');
-        $('.our-apartments__body__slider__content').hide();
+        $('.elit .our-apartments__body__slider__content').hide();
+        $(tabId).show();
+        $('.flexslider').resize();
+    });
+    //end tabs for our-apartments .elit
+
+    //tabs for our-apartments .classic
+    $('.classic .our-apartments__body__slider__content').each(function (i) {
+        if (i != 0) {
+            $(this).hide(0)
+        }
+    });
+    $(document).on('click', '.classic .our-apartments__body__tabs__tab a', function (e) {
+        e.preventDefault();
+        var tabId = $(this).attr('href');
+        $('.classic .our-apartments__body__tabs__tab a').removeClass('active');
+        $(this).addClass('active');
+        $('.classic .our-apartments__body__slider__content').hide();
         $(tabId).show();
         $('.flexslider').resize();
     });
@@ -97,8 +114,27 @@ $(document).ready(function () {
         $('.our-apartments__head__address a').removeClass('active');
         $(this).addClass('active');
         $('.photo').hide();
+        $(tabId).show();
+        $('.flexslider').resize();
+    });
+
+
+    //for our-apartments-address-tab
+    $('.our-apartments__body').each(function (i) {
+        if (i != 0) {
+            $(this).hide(0)
+        }
+    });
+    $(document).on('click', '.our-apartments__head__address a', function (e) {
+        e.preventDefault();
+        var tabId = $(this).attr('href');
+        $('.our-apartments__head__address a').removeClass('active');
+        $(this).addClass('active');
+        $('.our-apartments__body').hide();
         $(tabId).fadeIn();
     });
+    //end for our-apartments-address-tab
+
 
 
     //for request-call
