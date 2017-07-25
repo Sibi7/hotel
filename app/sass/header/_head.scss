@@ -148,6 +148,9 @@
         float: right;
         margin-right: 20px;
       }
+      @include breakpoint(max-width 770px) {
+        margin-bottom: 40px;
+      }
       &:after {
         display: block;
         position: absolute;
@@ -221,12 +224,18 @@
         line-height: 49px;
         margin-left: 55px;
         margin-bottom: 0;
+        @include breakpoint(max-width 375px) {
+          margin-bottom: 30px;
+        }
       }
       ul {
         padding: 0;
         margin-left: 80px;
         margin-top: 0;
         list-style-image: url("../img/icon/mark.png");
+        @include breakpoint(max-width 375px) {
+          display: none;
+        }
         li {
           color: #494949;
           font-size: 17px;
